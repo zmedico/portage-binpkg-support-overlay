@@ -1,8 +1,8 @@
 Portage Binpkg Support Overlay
 ==============================
 
-This overlay contains a forked version of sys-apps/portage with enhanced
-binary package support.
+This overlay contains a version of sys-apps/portage-9999 with enhanced binary package support, which pulls from the
+[binpkg-support-integration branch](https://github.com/zmedico/portage/tree/binpkg-support-integration).
 
 Usage
 -----
