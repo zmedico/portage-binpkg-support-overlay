@@ -26,12 +26,17 @@ profiles. An atom like `=sys-apps/portage-2.2.15-1` will select the binary packa
 for sys-apps/portage-2.2.15 with build-id 1. The binary package can be fetched from a binhost
 via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage-2.2.15-1.xpak`.
 
+In order to enable soname dependency resolution, use emerge --ignore-soname-deps=n, and refer
+to the emerge(1) man page for more information about this option. Note that --usepkgonly or
+--getbinpkgonly must be enabled in order for soname dependency resolution to work for
+installation actions.
+
 Included features not upstream
 ------------------------------
 
 * [FEATURES=binpkg-multi-instance](https://github.com/zmedico/portage/tree/multi-binpkg-per-ebuild) (support is nearing completion)
 
-* [Soname dependencies](https://github.com/zmedico/portage/tree/binpkg-soname-deps) (dependency resolver currently ignores REQUIRES and PROVIDES data)
+* [Soname dependencies](https://github.com/zmedico/portage/tree/binpkg-soname-deps) (support is nearing completion)
 
 Included features unreleased upstream (as of sys-apps/portage-2.2.15)
 ---------------------------------------------------------------------
