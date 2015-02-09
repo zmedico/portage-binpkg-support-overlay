@@ -29,7 +29,12 @@ via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage
 In order to enable soname dependency resolution, use emerge --ignore-soname-deps=n, and refer
 to the emerge(1) man page for more information about this option. Note that --usepkgonly or
 --getbinpkgonly must be enabled in order for soname dependency resolution to work for
-installation actions.
+installation actions. I've put my
+[PROVIDES_EXCLUDE and REQUIRES_EXCLUDE package.bashrc](https://github.com/zmedico/portage-soname-bashrc)
+settings in a git repo, to provide some examples of how PROVIDES_EXCLUDE and REQUIRES_EXCLUDE
+are useful in practice. With these settings in /etc/portage/profile/package.bashrc, all soname
+dependencies on my desktop multilib system are resolvable (2283 packages, including KDE 4.14.3).
+
 
 Included features not upstream
 ------------------------------
