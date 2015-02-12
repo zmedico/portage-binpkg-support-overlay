@@ -22,9 +22,9 @@ In order to enable support for multiple binary package instances in PKGDIR per e
 FEATURES="binpkg-multi-instance" in /etc/portage/make.conf or in make.defaults of your profile.
 In order to allow a dependency atom in your profiles to select a specific build, set
 "profile-formats = build-id" in metadata/layout.conf of the repository that contains your
-profiles. An atom like `=sys-apps/portage-2.2.16-1` will select the binary package instance
-for sys-apps/portage-2.2.16 with build-id 1. The binary package can be fetched from a binhost
-via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage-2.2.16-1.xpak`.
+profiles. An atom like `=sys-apps/portage-2.2.17-1` will select the binary package instance
+for sys-apps/portage-2.2.17 with build-id 1. The binary package can be fetched from a binhost
+via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage-2.2.17-1.xpak`.
 
 In order to enable soname dependency resolution, use emerge --ignore-soname-deps=n, and refer
 to the emerge(1) man page for more information about this option. Note that --usepkgonly or
