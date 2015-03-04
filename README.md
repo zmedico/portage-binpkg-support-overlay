@@ -1,6 +1,10 @@
 Portage Binpkg Support Overlay
 ==============================
 
+NOTE: This overlay is not currently needed, since the relevant features have all
+been merged upstream. Support for FEATURES=binpkg-multi-instance is not yet
+released as of portage-2.2.18, but is available in portage-9999.
+
 This overlay contains a version of sys-apps/portage-9999 with enhanced binary package support, which pulls from the
 [binpkg-support-integration branch](https://github.com/zmedico/portage/tree/binpkg-support-integration).
 
@@ -22,9 +26,9 @@ In order to enable support for multiple binary package instances in PKGDIR per e
 FEATURES="binpkg-multi-instance" in /etc/portage/make.conf or in make.defaults of your profile.
 In order to allow a dependency atom in your profiles to select a specific build, set
 "profile-formats = build-id" in metadata/layout.conf of the repository that contains your
-profiles. An atom like `=sys-apps/portage-2.2.17-1` will select the binary package instance
-for sys-apps/portage-2.2.17 with build-id 1. The binary package can be fetched from a binhost
-via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage-2.2.17-1.xpak`.
+profiles. An atom like `=sys-apps/portage-2.2.18-1` will select the binary package instance
+for sys-apps/portage-2.2.18 with build-id 1. The binary package can be fetched from a binhost
+via emerge --getbinpkg, or stored locally as `${PKGDIR}/sys-apps/portage/portage-2.2.18-1.xpak`.
 
 In order to enable soname dependency resolution, use emerge --ignore-soname-deps=n, and refer
 to the emerge(1) man page for more information about this option. Note that --usepkgonly or
@@ -36,9 +40,7 @@ are useful in practice. With these settings in /etc/portage/profile/package.bash
 dependencies on my desktop multilib system are resolvable (2283 packages, including KDE 4.14.3).
 
 
-Included features not upstream
-------------------------------
+Included features not released upstream
+---------------------------------------
 
 * [FEATURES=binpkg-multi-instance](https://github.com/zmedico/portage/tree/multi-binpkg-per-ebuild) (support is nearing completion)
-
-* [Soname dependencies](https://github.com/zmedico/portage/tree/binpkg-soname-deps) (support is nearing completion)
