@@ -73,9 +73,8 @@ prefix_src_archives() {
 	done
 }
 
-EGIT_REPO_URI="https://github.com/zmedico/portage.git"
-EGIT_BRANCH="binpkg-support-integration"
-EGIT_CLONE_TYPE="shallow"
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
+	https://github.com/gentoo/portage.git"
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
